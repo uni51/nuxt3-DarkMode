@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const { isDarkMode, toggleDarkMode } = useDarkMode();
+</script>
+
 <template>
   <nav>
     <div>
-      <h1>Artikle</h1>
+      <h1>Artikle {{ isDarkMode }}</h1>
       <label class="switch">
         <input type="checkbox" />
         <span class="slider round"></span>
