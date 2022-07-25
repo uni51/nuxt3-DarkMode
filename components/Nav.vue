@@ -3,11 +3,11 @@ const { isDarkMode, toggleDarkMode } = useDarkMode();
 </script>
 
 <template>
-  <nav>
-    <div>
+  <nav :style="isDarkMode ? { backgroundColor: 'rgb(73,72,72)' } : null">
+    <div :style="isDarkMode ? { color: 'white' } : null">
       <h1>Artikle {{ isDarkMode }}</h1>
       <label class="switch">
-        <input type="checkbox" />
+        <input type="checkbox" v-model="isDarkMode" @click="toggleDarkMode" />
         <span class="slider round"></span>
       </label>
     </div>
